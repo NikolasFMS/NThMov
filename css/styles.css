@@ -1,0 +1,523 @@
+body {
+    user-select: none;
+    /* Отключить выделение текста для всего документа */
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #eaf6fe;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    width: 98vw;
+    max-width: 550px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.controller {
+    margin-top: 10%;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+}
+
+.intro {
+    color: #643877;
+    text-shadow: 0.15vh 0.15vh 0px #6438774a;
+}
+
+.left,
+.rite {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left {
+    margin-right: 20%;
+}
+
+.popup-chuse {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 1vh;
+    padding: 1vh;
+    border: 1px solid #c2c2c2c2;
+    background-color: #f4df77;
+}
+
+
+.movie,
+.chuse {
+    width: 100%;
+    height: 100%;
+    border-radius: 2vh;
+    /* Установите нужную высоту */
+    background-size: 100% 100%;
+    /* Заполнить контейнер с искажением */
+    background-repeat: no-repeat;
+    /* Не повторять изображение */
+    background-position: center;
+    /* Центрирует изображение */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Плавный переход */
+}
+
+.no {
+    border: 0.7vh dashed hwb(281.9deg 21.96% 53.33% / 10%) !important;
+}
+
+.img1 {
+    background-image: url('/img/jet1.svg') !important;
+    /* Изображение 1 */
+    filter: drop-shadow(0 4px 2px #6438775f); /* Добавляем тень к изображению */
+    transition: filter 0.3s ease; /* Плавный эффект при изменении */
+}
+
+.img2 {
+    background-image: url('/img/jet2.svg') !important;
+    /* Изображение 2 */
+    filter: drop-shadow(0 4px 2px #6438775f); /* Добавляем тень к изображению */
+    transition: filter 0.3s ease; /* Плавный эффект при изменении */
+}
+
+.img2:hover,
+.img1:hover {
+    filter: drop-shadow(0 6px 4px #64387789); /* Усиленная тень при наведении */
+}
+
+.movie:active,
+.chuse:active {
+    
+    transform: scale(1.3);
+    /* Увеличивает кнопку на 10% */
+}
+
+.button {
+
+    text-transform: uppercase;
+
+}
+
+
+@media (max-width: 700px) {
+    .text-review {
+        margin-top: 3vh;
+        font-size: 1.5vh;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+
+    .cards {
+        height: 63vh !important;
+    }
+
+    .name {
+        margin-top: 5vh;
+    }
+
+    .reviews-container{
+        height: 15vh !important;
+        gap: 1px !important;
+        min-width: 100% !important;
+    }
+    .reviews {
+        height: 180px !important;
+    }
+}
+@media (min-width: 700px) {
+
+}
+
+@media (max-width: 899px) {
+
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    
+}
+
+@media (min-width: 1200px) {
+
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -40px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 100%;
+}
+
+.map {
+    /*width: 355px;*/
+    /* Установите нужную ширину */
+    /*height: 850px;*/
+    /* Установите нужную высоту */
+    height: 80vh;
+    width: 95%;
+    min-width: 435px;
+    background-size: 100% 100%;
+    /* Заполнить контейнер с искажением */
+    background-repeat: no-repeat;
+    /* Не повторять изображение */
+    background-image: url('/img/desk.svg');
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+#left {}
+
+#rhite {}
+
+.reviews-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 22vh;
+    z-index: 2;
+    gap: 0.5vh;
+    min-width: 435px;
+}
+
+.reviews {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* Установите нужную ширину */
+    /* Установите нужную высоту */
+    background-size: 100% 100%;
+    /* Заполнить контейнер с искажением */
+    background-repeat: no-repeat;
+    /* Не повторять изображение */
+    background-position: center;
+    /* Центрировать изображение */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.3)); /* Добавляем тень к изображению */
+}
+
+#positive {
+    background-image: url('/img/pos.svg');
+}
+
+#negative {
+    background-image: url('/img/neget.svg');
+}
+
+.text-name {
+    width: 62%;
+    height: 20%
+}
+
+.name {
+    width: 100%;
+    color: aliceblue;
+}
+
+.review {
+    width: 80%;
+    height: 100%;
+}
+
+.text-review {
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 66vh;
+    width: 100%;
+    margin-top: 5.5vh;
+    gap: 0.2vh;
+}
+
+.card {
+    width: 100%;
+    min-width: 150px;
+    height: 13vh;
+    padding: 0.1vh;
+    /*width: 220px;*/
+    /*height: 135px;*/
+    border-radius: 10px;
+    /* Установите нужную ширину */
+    /* Установите нужную высоту */
+    background-size: 100% 100%;
+    /* Заполнить контейнер с искажением */
+    background-repeat: no-repeat;
+    /* Не повторять изображение */
+    background-position: center;
+    /* Центрировать изображение */
+    background-image: url('/img/card.svg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+h3 {
+    font-size: 13px;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 15px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 90%;
+    line-height: 1.2;
+}
+
+.textUp-container {
+    width: 72%;
+    height: 40%;
+    display: grid;
+    justify-items: center;
+    /* Центрирование по горизонтали */
+    align-items: start;
+    /* Выравнивание по нижнему краю */
+}
+
+.textDown-container {
+    width: 72%;
+    height: 40%;
+    display: grid;
+    justify-items: center;
+    /* Центрирование по горизонтали */
+    align-items: end;
+    /* Выравнивание по нижнему краю */
+}
+
+.textUp {
+    text-align: center;
+    font-size: 60%;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* Жирный шрифт */
+
+}
+
+.textDown {
+    font-size: 60%;
+    text-align: center;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* Жирный шрифт */
+
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.hide {
+    display: none !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e4dbf1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-next{
+    background-color: rgba(253, 255, 127, 0.002);
+}
+
+.popup-menu{
+    background-color: rgba(48, 49, 47, 0.406);
+}
+
+.round {
+    top: 80% !important;
+}
+
+.menu {
+    width: 100%;
+    max-width: 300px;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.finish{
+    flex-direction: column;
+}
+
+.finish-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: #c2c2c2c2;
+    padding: 1vh 4vw 2vh 4vw;
+    border-radius: 2vh;
+    box-shadow: 3px 4px 2px #9f958c;
+}
+
+#point {
+    color: #643877;
+    font-size: 10vh;
+}
+
+#result{
+    padding-top: 1vh;
+    font-size: 3vh;
+    font-weight: 400;
+}
+
+.z{
+    color: #e6007e;
+}
+
+.stars-container {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.star {
+    width: 24px;
+    height: 24px;
+    background-image: url('/img/star.svg');
+    background-size: cover;
+}
+
+#playerCountPage {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px 40px;
+    background: #ffdd00;
+    border-radius: 1.5vh;
+    box-shadow: 4px 4px 2px #361c068a;
+}
+
+#playerCount {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #eaf6fe;
+    border-color: #c2c2c2c2;
+    color: #643877;
+}
+
+option {
+    padding: 0 10px;
+}
+
+#popup {
+    background: #15595f;
+    padding: 2vh 5vh 4vh;
+    border-radius: 1vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #c2c2c2c2;
+}
+
+.popup-container {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+#first,
+#next-round {
+    text-transform: uppercase;
+}
+
+.action-button,
+.next {
+    border: 1px solid #c2c2c2c2;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    width: 17vh;
+}
+
+.next {
+    border-color: #6438774a;
+    background-color: #c2c2c2c2;
+}
+
+.action-button:active,
+.next:active {
+    color: #062c36;
+    background-color: #c2c2c2c2;
+}
+
+.img-container {
+    width: 100%;
+    height: 30%;
+}
+
+#logoImg{
+    background-size: 100% 100%;
+    /* Заполнить контейнер с искажением */
+    background-repeat: no-repeat;
+    /* Не повторять изображение */
+    background-position: center;
+    /* Центрировать изображение */
+    background-image: url('/img/logo.svg');
+    min-width: 100%;
+    min-height: 100%;
+}

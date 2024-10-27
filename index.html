@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="ico/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Подключение шрифтов -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <title>Not That Movie!</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Основной контейнер  -->
+        <div class="container 1">
+            <div class="menu">
+                <div class="img-container" id="logo">
+                    <div id="logoImg">
+                    </div>
+                </div>
+                <div id="playerCountPage" class="page page2">
+
+                    <h1 class="intro">Сколько игроков?</h1>
+                        <div class="select-container">
+                            <select id="playerCount" class="select player" onclick="playSound(clickSound);">
+                                <option>2 players</option>
+                                <option>3 players</option>
+                                <option>4 players</option>
+                                <option>5 players</option>
+                                <option>6 players</option>
+                                <option>7 players</option>
+                            </select>
+                        </div>
+                        <p>Выберите колличество игроков.</p>
+                        <button class="button next" type="button" onclick="start()">NEXT</button>
+                </div>
+            </div>
+            <div class="game hide">
+                <div class="img-container hide" id="logo">
+                    <div style="background-image: url('/img/logo.svg');" id="logoImg">
+                    </div>
+                </div>
+                <div class="table">
+                    <div class="map">
+                        <div class="cards" id="left">
+                            <div class="card">
+                                <div class="textUp-container">
+                                    <div class="textUp hidden"></div>
+                                </div>
+                                <div class="textDown-container">
+                                    <div class="textDown"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="textUp-container">
+                                    <div class="textUp"></div>
+                                </div>
+                                <div class="textDown-container">
+                                    <div class="textDown"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="textUp-container">
+                                    <div class="textUp"></div>
+                                </div>
+                                <div class="textDown-container">
+                                    <div class="textDown"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="textUp-container">
+                                    <div class="textUp"></div>
+                                </div>
+                                <div class="textDown-container">
+                                    <div class="textDown"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="textUp-container">
+                                    <div class="textUp"></div>
+                                </div>
+                                <div class="textDown-container">
+                                    <div class="textDown hide"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="controller">
+                            <div class="left">
+                                <div class="button movie" id="movie1"></div>
+                                <div class="button movie" id="movie2"></div>
+                                <div class="button movie" id="movie3"></div>
+                                <div class="button movie" id="movie4"></div>
+                            </div>
+                            <div class="rite">
+                                <div class="button movie" id="movie5"></div>
+                                <div class="button movie" id="movie6"></div>
+                                <div class="button movie" id="movie7"></div>
+                                <div class="button movie" id="movie8"></div>
+                            </div>
+                        </div>
+                        <div class="cards" id="rhite">
+                            <div class="card">
+                                <div class="textUp-container">
+                                    <div class="textUp hidden"></div>
+                                </div>
+                                <div class="textDown-container">
+                                    <div class="textDown"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="textUp-container">
+                                    <div class="textUp"></div>
+                                </div>
+                                <div class="textDown-container">
+                                    <div class="textDown"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="textUp-container">
+                                    <div class="textUp"></div>
+                                </div>
+                                <div class="textDown-container">
+                                    <div class="textDown"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="textUp-container">
+                                    <div class="textUp"></div>
+                                </div>
+                                <div class="textDown-container">
+                                    <div class="textDown"></div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="textUp-container">
+                                    <div class="textUp"></div>
+                                </div>
+                                <div class="textDown-container">
+                                    <div class="textDown hide"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-container">
+                        <div class="reviews positive" id="positive">
+                            <div class="text-name">
+                                <h3 class="name"></h3>
+                            </div>
+                            <div class="review">
+                                <p class="text-review"></p>
+                            </div>
+                        </div>
+                        <div class="reviews negative" id="negative">
+                            <div class="text-name">
+                                <h3 class="name"></h3>
+                            </div>
+                            <div class="review">
+                                <p class="text-review"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Оверлей загрузки игры -->
+    <div class="overlay load">
+        <h2> Загрузка... </h3>
+    </div>
+
+    <div class="overlay popup-menu hide">
+        <div class="popup" id="popup">
+            <div class="h3" id="first">выберите жетон</div>
+            <div class="popup-container">  
+                <div class="popup-chuse">
+                    <div class="button chuse img1" onclick="chuse('img1')"></div>
+                    <div class="button chuse img2" onclick="chuse('img2')" ></div>
+                </div>
+                <div class="button action-button 1" id="button1" onclick="closePopUp()">
+                    <div class="h2" id="first">отмена</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay popup-next hide">
+        <div class="popup round hide" id="popup">
+            <div class="h3" id="next-round">следующий раунд</div>
+            <div class="h2" id="second">вы набрали 10 очков</div>
+            <div class="popup-container">
+                <div class="button action-button 1" id="button1" onclick="goToNextRound()">
+                    <div class="h2 open-finish" id="first">далее</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay finish hide">
+        <div class="finish-container">
+            <div class="h3" id="point"></div>
+            <div class="h2" id="vopros">Ваш результат</div>
+            <div class="stars-container">
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+    <!-- Подключение скриптов -->
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
