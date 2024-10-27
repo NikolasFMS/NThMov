@@ -1,7 +1,7 @@
 const CACHE_NAME = 'NotKinoV1'; // Уникальное имя для кэша
 const URLS_TO_CACHE = [
     'index.html',
-    '/css/styles.css',
+    'css/styles.css',
     'scripts/script.js',
     'service-worker.js',
     'manifest.json',
