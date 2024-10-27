@@ -93,14 +93,14 @@ body {
 }
 
 .img1 {
-    background-image: url('img/jet1.svg') !important;
+    background-image: url('/img/jet1.svg') !important;
     /* Изображение 1 */
     filter: drop-shadow(0 4px 2px #6438775f); /* Добавляем тень к изображению */
     transition: filter 0.3s ease; /* Плавный эффект при изменении */
 }
 
 .img2 {
-    background-image: url('img/jet2.svg') !important;
+    background-image: url('/img/jet2.svg') !important;
     /* Изображение 2 */
     filter: drop-shadow(0 4px 2px #6438775f); /* Добавляем тень к изображению */
     transition: filter 0.3s ease; /* Плавный эффект при изменении */
@@ -188,7 +188,7 @@ body {
     /* Заполнить контейнер с искажением */
     background-repeat: no-repeat;
     /* Не повторять изображение */
-    background-image: url('img/desk.svg');
+    background-image: url('/img/desk.svg');
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -232,11 +232,11 @@ body {
 }
 
 #positive {
-    background-image: url('img/pos.svg');
+    background-image: url('/img/pos.svg');
 }
 
 #negative {
-    background-image: url('img/neget.svg');
+    background-image: url('/img/neget.svg');
 }
 
 .text-name {
@@ -284,7 +284,7 @@ body {
     /* Не повторять изображение */
     background-position: center;
     /* Центрировать изображение */
-    background-image: url('img/card.svg');
+    background-image: url('/img/card.svg');
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,7 +430,7 @@ p {
 .star {
     width: 24px;
     height: 24px;
-    background-image: url('img/star.svg');
+    background-image: url('/img/star.svg');
     background-size: cover;
 }
 
@@ -517,7 +517,7 @@ option {
     /* Не повторять изображение */
     background-position: center;
     /* Центрировать изображение */
-    background-image: url('img/logo.svg');
+    background-image: url('/img/logo.svg');
     min-width: 100%;
     min-height: 100%;
 }
