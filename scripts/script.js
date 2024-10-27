@@ -1365,7 +1365,7 @@ function resetButtons() {
     openAllCards();
 }
 
-window.onload = async function () {
+window.onload = function () {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
             .then(registration => {
