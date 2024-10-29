@@ -89,7 +89,11 @@ body {
 }
 
 .no {
-    border: 0.7vh dashed hwb(281.9deg 21.96% 53.33% / 10%) !important;
+    border: 0.4vh dashed hwb(281.9deg 21.96% 53.33% / 10%) !important;
+}
+
+.last {
+    border: 0.5vh solid red !important;
 }
 
 .img1 {
