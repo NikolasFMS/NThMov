@@ -1248,9 +1248,6 @@ function handleCardClick(button) {
         } else if (button.classList.contains("img2")) {
             errorCount--;
         }
-
-        lastButtonClicked.className = "button movie last";
-
         openPopUp();
     } else {
         if (button.classList.contains("no")) {
@@ -1332,6 +1329,7 @@ function openNextRoundMenu() {
 function openPopUp() {
     if (selectedPoints >= requiredPoints - 1 || errorCount >= 2 - 1) {
         document.querySelector(".popup-menu").classList.remove("hide");
+        lastButtonClicked.className = "button movie last";
     }
 }
 
