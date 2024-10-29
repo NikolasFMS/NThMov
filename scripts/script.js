@@ -1249,7 +1249,7 @@ function handleCardClick(button) {
             errorCount--;
         }
 
-        lastButtonClicked.className = "button movie no";
+        lastButtonClicked.className = "button movie last";
 
         openPopUp();
     } else {
