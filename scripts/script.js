@@ -1300,7 +1300,7 @@ function openNextRoundMenu() {
     } else {
         round++;
         if (selectedPoints === requiredPoints && errorCount <= 0) {
-            selectedPoints++;
+            selectedPoints === 8;
         }
         coinPoint += selectedPoints;
     }
