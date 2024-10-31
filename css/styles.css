@@ -31,9 +31,9 @@ body {
 }
 
 .controller {
-    margin-top: 10%;
+    margin-top: 15%;
     width: 100%;
-    height: 70%;
+    height: 67%;
     display: flex;
     justify-content: center;
     z-index: 20;
@@ -47,7 +47,7 @@ body {
 .left,
 .rite {
     width: 100%;
-    height: 100%;
+    height: 92%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,8 +74,8 @@ body {
 .movie,
 .chuse {
     width: 100%;
-    height: 100%;
-    border-radius: 2vh;
+    height: 10vh;
+    border-radius: 1vh;
     /* Установите нужную высоту */
     background-size: 100% 100%;
     /* Заполнить контейнер с искажением */
