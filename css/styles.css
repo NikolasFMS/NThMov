@@ -88,6 +88,11 @@ body {
     /* Плавный переход */
 }
 
+.chuse {
+    height: 7vh !important;
+
+}
+
 .no {
     border: 0.4vh dashed hwb(281.9deg 21.96% 53.33% / 10%) !important;
 }
