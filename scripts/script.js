@@ -1280,6 +1280,7 @@ function chuse(img) {
         openNextRoundMenu(); // Вызов функции для открытия следующего раунда
         document.querySelector(".popup-next").classList.remove("hide");
     }
+    lastButtonClicked = null;
     closePopUp(); // Закрытие popup
 }
 
@@ -1350,7 +1351,9 @@ function goToNextRound() {
 
 function closePopUp() {
     playSound(clickSound);
-        lastButtonClicked.className = "button movie no";
+    if (lastButtonClicked) {
+     lastButtonClicked.className = "button movie no";
+    }
     document.querySelector(".popup-menu").classList.add("hide");
     console.log("requiredPoints", requiredPoints, "selectedPoints", selectedPoints, "errorCount", errorCount, "lastButtonClicked", lastButtonClicked)
 }
